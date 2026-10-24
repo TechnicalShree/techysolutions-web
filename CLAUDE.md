@@ -30,7 +30,7 @@ lib/content.ts          all copy and data; components read from here
 - Type scale tokens: `text-display`, `text-section`, `text-block`, `text-lead`.
 - Shared classes in `@layer components`: `btn` + `btn-primary | btn-secondary | btn-ghost | btn-lg`, `input`, `tag` + `tag-accent | tag-neutral | tag-outline`, `seg`/`seg-opt`, `wrap` (page container), `section` (vertical padding), `kicker`, `caps`.
 - Horizontal page gutter: `px-(--edge)`.
-- Design is flat/modernist: no border radius, 2px divider rules, Archivo font (weight 800 for headings).
+- Design is flat/modernist: rounded corners (pill buttons/tags, `rounded-xl` inputs, `rounded-2xl` cards; full-bleed bands stay square), 2px divider rules, Archivo font (weight 800 for headings).
 - Don't put two font-size utilities on one element (e.g. `text-display` plus `text-[...]`); write the full size/leading/tracking instead.
 
 ## Conventions

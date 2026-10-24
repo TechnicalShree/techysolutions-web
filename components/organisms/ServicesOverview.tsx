@@ -20,7 +20,7 @@ export default function ServicesOverview() {
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
         {services.map((s) => (
           <article
-            className="flex flex-col bg-surface border-t-4 border-ink transition-[border-color,box-shadow] duration-150 hover:border-accent hover:shadow-md"
+            className="flex flex-col overflow-hidden rounded-2xl bg-surface border-t-4 border-ink transition-[border-color,box-shadow] duration-150 hover:border-accent hover:shadow-md"
             key={s.slug}
           >
             <div className="h-50 p-5 flex flex-col justify-end"><ServiceVisual slug={s.slug} /></div>
@@ -43,9 +43,9 @@ export default function ServicesOverview() {
             <p className="text-sm leading-5.5 text-ink/78">Slow pages, broken customisations or stuck on an old version — we take it over.</p>
           </div>
           <div className="flex items-center gap-2 font-extrabold text-xl" aria-hidden="true">
-            <span className="py-2 px-2.5 bg-surface">v13</span>
+            <span className="py-2 px-2.5 rounded-lg bg-surface">v13</span>
             <ArrowRight size={18} strokeWidth={2.5} />
-            <span className="py-2 px-2.5 bg-accent text-paper">v15</span>
+            <span className="py-2 px-2.5 rounded-lg bg-accent text-paper">v15</span>
           </div>
         </div>
         <div className={duoCard}>

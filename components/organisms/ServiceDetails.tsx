@@ -11,7 +11,7 @@ export default function ServiceDetails() {
       aria-labelledby={s.slug + "-title"}
     >
       <div>
-        <span className="flex items-center gap-2.5 text-[13px] font-bold before:content-[''] before:size-2.5 before:bg-accent">{s.num}</span>
+        <span className="flex items-center gap-2.5 text-[13px] font-bold before:content-[''] before:size-2.5 before:rounded-full before:bg-accent">{s.num}</span>
         <h2 id={s.slug + "-title"} className="text-[32px] leading-9 my-3.5">{s.title}</h2>
         <p className="text-ink/78 text-base leading-6.5">{s.outcome}</p>
       </div>

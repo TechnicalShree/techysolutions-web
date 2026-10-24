@@ -13,7 +13,7 @@ export default function Photo({ label, src, alt, className, sizes = "(max-width:
   return (
     <div
       className={
-        "relative flex items-end overflow-hidden p-3 text-xs text-ink/70 grayscale contrast-[1.08] " +
+        "relative flex items-end overflow-hidden rounded-2xl p-3 text-xs text-ink/70 grayscale contrast-[1.08] " +
         "bg-[repeating-linear-gradient(135deg,var(--color-surface)_0_12px,color-mix(in_srgb,var(--color-ink)_6%,var(--color-surface))_12px_13px)] " +
         (className ?? "")
       }

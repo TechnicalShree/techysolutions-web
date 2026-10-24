@@ -5,7 +5,7 @@ import { goLiveChecklist } from "@/lib/content";
 export default function ServiceVisual({ slug }: { slug: string }) {
   if (slug === "erp-customisation") {
     return (
-      <pre className="m-0 py-3.5 px-4 overflow-hidden whitespace-pre bg-ink text-paper font-mono text-xs leading-5" aria-hidden="true">
+      <pre className="m-0 rounded-xl py-3.5 px-4 overflow-hidden whitespace-pre bg-ink text-paper font-mono text-xs leading-5" aria-hidden="true">
         <span className="opacity-60"># custom_app/hooks.py</span>{"\n"}
         {"doc_events = {\n"}
         {'  "Sales Order": {\n'}

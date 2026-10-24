@@ -42,7 +42,7 @@ export default function ContactForm({ compact = false }: { compact?: boolean }) 
   if (status === "sent") {
     return (
       <div className="flex flex-col gap-5" role="status">
-        <span className="size-12 grid place-items-center bg-accent text-paper"><Check size={24} strokeWidth={2.5} /></span>
+        <span className="size-12 grid place-items-center rounded-2xl bg-accent text-paper"><Check size={24} strokeWidth={2.5} /></span>
         <h2 className="text-[40px] leading-11">Thanks — we’ve got it.</h2>
         <p className="text-ink/78">
           {needs.length ? "You asked about: " + needs.join(", ") + ". " : ""}We’ll reply to your email with next steps.

@@ -6,9 +6,9 @@ export default function HeroVisual() {
   const { kpis, bars, orders, portal } = heroDashboard;
   return (
     <div className="relative flex flex-col gap-4 xl:block xl:h-[560px]" aria-hidden="true">
-      <div className="w-full bg-paper shadow-lg border border-divider xl:absolute xl:top-15 xl:right-0 xl:w-[min(610px,100%)]">
+      <div className="w-full overflow-hidden rounded-2xl bg-paper shadow-lg border border-divider xl:absolute xl:top-15 xl:right-0 xl:w-[min(610px,100%)]">
         <div className="h-[34px] bg-ink text-paper flex items-center gap-1.5 px-3 text-xs">
-          <span className="size-[9px] bg-accent" />
+          <span className="size-[9px] rounded-full bg-accent" />
           <span className="size-[9px] bg-paper/40" />
           <span className="size-[9px] bg-paper/40" />
           <span className="ml-3 opacity-85 truncate">erp.yourcompany.com / app / selling</span>
@@ -16,7 +16,7 @@ export default function HeroVisual() {
         <div className="grid grid-cols-1 sm:grid-cols-[48px_minmax(0,1fr)]">
           <div className="hidden sm:flex bg-surface flex-col items-center gap-3.5 py-4">
             {[0, 1, 2, 3, 4].map((i) => (
-              <i key={i} className="size-[18px] border-2 border-ink/45 first:bg-accent first:border-accent" />
+              <i key={i} className="size-[18px] rounded-md border-2 border-ink/45 first:bg-accent first:border-accent" />
             ))}
           </div>
           <div className="pt-[18px] px-5 pb-5 flex flex-col gap-4 min-w-0">
@@ -26,7 +26,7 @@ export default function HeroVisual() {
             </div>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
               {kpis.map((k) => (
-                <div className="p-3 bg-surface max-sm:nth-3:hidden" key={k.label}>
+                <div className="p-3 rounded-xl bg-surface max-sm:nth-3:hidden" key={k.label}>
                   <small className="block text-[11px] tracking-[0.06em] uppercase text-ink/70">{k.label}</small>
                   <strong className="block font-extrabold text-2xl mt-1.5">{k.value}</strong>
                   <em className="not-italic text-[11px] text-accent-700">{k.delta}</em>
@@ -35,7 +35,7 @@ export default function HeroVisual() {
             </div>
             <div className="flex items-end gap-2 h-30 border-b-2 border-ink">
               {bars.map((h, i) => (
-                <span key={i} className="flex-1 bg-ink/22 last:bg-accent" style={{ height: h + "%" }} />
+                <span key={i} className="flex-1 rounded-t-md bg-ink/22 last:bg-accent" style={{ height: h + "%" }} />
               ))}
             </div>
             <div>
@@ -51,8 +51,8 @@ export default function HeroVisual() {
         </div>
       </div>
 
-      <div className="self-start flex items-center gap-3 py-3 pl-3 pr-4 bg-ink text-paper shadow-lg xl:absolute xl:top-0 xl:left-0">
-        <span className="size-[30px] grid place-items-center bg-accent"><Check size={16} strokeWidth={3} /></span>
+      <div className="self-start flex items-center gap-3 py-3 pl-3 pr-4 rounded-2xl bg-ink text-paper shadow-lg xl:absolute xl:top-0 xl:left-0">
+        <span className="size-[30px] grid place-items-center rounded-lg bg-accent"><Check size={16} strokeWidth={3} /></span>
         <div>
           <b className="block text-[13px]">Purchase order approved</b>
           <small className="block text-[11px] opacity-80">Custom workflow · just now</small>
@@ -77,7 +77,7 @@ export default function HeroVisual() {
         </div>
       </div>
 
-      <span className="flex items-center gap-2 text-xs text-ink/70 before:content-[''] before:size-2 before:bg-accent xl:absolute xl:right-6 xl:bottom-3">
+      <span className="flex items-center gap-2 text-xs text-ink/70 before:content-[''] before:size-2 before:rounded-full before:bg-accent xl:absolute xl:right-6 xl:bottom-3">
         Illustrative — your system, your data
       </span>
     </div>
