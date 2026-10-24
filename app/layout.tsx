@@ -1,0 +1,42 @@
+import type { Metadata } from "next";
+import type { ReactNode } from "react";
+import { Archivo } from "next/font/google";
+import "./globals.css";
+import SiteNav from "@/components/SiteNav";
+import SiteFooter from "@/components/SiteFooter";
+import { site } from "@/lib/content";
+
+const archivo = Archivo({
+  subsets: ["latin"],
+  weight: ["400", "600", "800"],
+  variable: "--font-archivo",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(site.url),
+  title: {
+    default: site.name + " — ERPNext, Frappe & Next.js",
+    template: "%s · " + site.name,
+  },
+  description: site.description,
+  openGraph: {
+    type: "website",
+    siteName: site.name,
+    title: site.name + " — ERPNext, Frappe & Next.js",
+    description: site.description,
+  },
+};
+
+export default function RootLayout({ children }: { children: ReactNode }) {
+  return (
+    <html lang="en" className={archivo.variable}>
+      <body>
+        <a href="#main" className="skip-link">Skip to content</a>
+        <SiteNav />
+        <main id="main">{children}</main>
+        <SiteFooter />
+      </body>
+    </html>
+  );
+}
