@@ -25,11 +25,9 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: site.name + " — ERPNext, Frappe & Next.js",
     description: site.description,
-    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["/og-image.png"],
   },
 };
 
