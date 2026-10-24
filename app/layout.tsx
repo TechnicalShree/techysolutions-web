@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en" className={archivo.variable}>
       <body>
-        <a href="#main" className="skip-link">Skip to content</a>
+        <a href="#main" className="absolute -left-[9999px] top-0 z-100 bg-ink text-paper py-2.5 px-3.5 focus:left-3 focus:top-3">Skip to content</a>
         <SiteNav />
         <main id="main">{children}</main>
         <SiteFooter />
