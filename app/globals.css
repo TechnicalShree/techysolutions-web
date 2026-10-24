@@ -80,6 +80,9 @@
       text-ink bg-transparent border border-transparent py-2 px-[14.4px] disabled:opacity-45 disabled:cursor-not-allowed
       [&_svg]:block [&_svg]:flex-none;
   }
+  .btn { @apply transition-[background-color,color,border-color,box-shadow,translate] duration-200 ease-out
+      hover:-translate-y-px hover:shadow-md active:translate-y-0 active:shadow-none
+      [&_svg]:transition-transform [&_svg]:duration-200 hover:[&_svg]:translate-x-0.5; }
   .btn-primary { @apply bg-accent text-paper hover:bg-accent-600 hover:text-paper active:bg-accent-700; }
   .btn-secondary { @apply border-divider text-ink hover:bg-ink/7 active:bg-ink/14 aria-pressed:bg-ink aria-pressed:text-paper aria-pressed:border-ink; }
   .btn-ghost { @apply text-accent px-1 hover:bg-accent/10 active:bg-accent/18; }
@@ -87,18 +90,19 @@
 
   .input {
     @apply w-full min-h-11 py-2 px-3 text-[15px] text-ink caret-accent bg-paper border border-divider
-      hover:border-ink/45 focus-visible:border-accent focus-visible:outline-offset-0;
+      hover:border-ink/45 focus-visible:border-accent focus-visible:outline-offset-0
+      transition-[border-color,box-shadow] duration-200 focus-visible:shadow-[0_0_0_4px_color-mix(in_srgb,var(--color-accent)_15%,transparent)];
   }
   textarea.input { @apply min-h-30 resize-y; }
 
-  .tag { @apply inline-flex items-center text-[11px] tracking-[0.02em] py-[3px] px-2.5; }
+  .tag { @apply transition-colors duration-200 inline-flex items-center text-[11px] tracking-[0.02em] py-[3px] px-2.5; }
   .tag-accent { @apply bg-accent-100 text-accent-800; }
   .tag-neutral { @apply bg-neutral-100 text-neutral-800; }
   .tag-outline { @apply border border-accent text-accent-700; }
 
   .seg { @apply flex sm:inline-flex overflow-hidden border border-divider bg-paper; }
   .seg-opt {
-    @apply relative inline-flex flex-1 sm:flex-none items-center gap-1.5 py-2.5 px-3.5 text-sm cursor-pointer
+    @apply transition-colors duration-200 relative inline-flex flex-1 sm:flex-none items-center gap-1.5 py-2.5 px-3.5 text-sm cursor-pointer
       [&+&]:border-l [&+&]:border-divider
       has-checked:bg-accent has-checked:text-paper not-has-checked:hover:bg-ink/7
       has-focus-visible:outline-2 has-focus-visible:outline-accent has-focus-visible:-outline-offset-2
@@ -109,4 +113,21 @@
   .section { @apply py-[clamp(56px,7.5vw,96px)]; }
   .kicker { @apply block text-[13px] tracking-[0.08em] uppercase text-accent-700; }
   .caps { @apply text-[13px] tracking-[0.08em] uppercase text-ink/70; }
+}
+
+/* ── Motion ───────────────────────────────────────────────────────────── */
+/* ponytail: CSS-only (scroll-driven animations); browsers without view() just show content. */
+@keyframes rise { from { opacity: 0; translate: 0 18px; } }
+@layer base {
+  a { transition: color .2s ease-out, background-color .2s ease-out, opacity .2s ease-out; }
+  @media (prefers-reduced-motion: no-preference) {
+    main { animation: rise .5s cubic-bezier(.2,.7,.2,1) both; }
+    @supports (animation-timeline: view()) {
+      main section > * {
+        animation: rise linear both;
+        animation-timeline: view();
+        animation-range: entry 0% entry 40%;
+      }
+    }
+  }
 }
