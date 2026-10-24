@@ -2,7 +2,10 @@
 
 export const site = {
   name: "TechySolutions",
-  url: process.env.NEXT_PUBLIC_SITE_URL || "https://techysolutions.com",
+  url:
+    process.env.NEXT_PUBLIC_SITE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
+    "https://techysolutions.com",
   description:
     "ERPNext implementation, Frappe customisation, Next.js web apps and dedicated developers for growing businesses.",
   email: "hello@techysolutions.com",

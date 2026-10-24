@@ -6,13 +6,6 @@ import SiteNav from "@/components/organisms/SiteNav";
 import SiteFooter from "@/components/organisms/SiteFooter";
 import { site } from "@/lib/content";
 
-const socialImage = {
-  url: "https://techysolutions-web.vercel.app/og-image.png?v=2",
-  width: 1730,
-  height: 909,
-  alt: "TechySolutions — ERPNext, Frappe & Next.js",
-};
-
 const archivo = Archivo({
   subsets: ["latin"],
   weight: ["400", "600", "800"],
@@ -32,11 +25,11 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: site.name + " — ERPNext, Frappe & Next.js",
     description: site.description,
-    images: [socialImage],
+    images: ["/og-image.png"],
   },
   twitter: {
     card: "summary_large_image",
-    images: [socialImage],
+    images: ["/og-image.png"],
   },
 };
 
