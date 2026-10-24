@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Archivo } from "next/font/google";
 import "./globals.css";
-import SiteNav from "@/components/SiteNav";
-import SiteFooter from "@/components/SiteFooter";
+import SiteNav from "@/components/organisms/SiteNav";
+import SiteFooter from "@/components/organisms/SiteFooter";
 import { site } from "@/lib/content";
 
 const archivo = Archivo({
