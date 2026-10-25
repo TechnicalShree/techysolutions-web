@@ -14,7 +14,8 @@ export default function ServicesOverview() {
           <h2 id="services-title" className="text-section">Everything your ERP needs, from one team.</h2>
         </div>
         <p className="text-lead max-w-[48ch] text-ink/80">
-          Start with one service or hand us the whole stack. Either way you get the same senior team.
+          Start with one service or hand us the whole stack. ERPNext is our specialty — but we build in whatever
+          tech your business runs on.
         </p>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-10">
@@ -34,6 +35,15 @@ export default function ServicesOverview() {
             </div>
           </article>
         ))}
+      </div>
+      <div className="flex flex-wrap items-center justify-between gap-4 mt-6 py-5 px-6 rounded-2xl bg-ink text-paper">
+        <p className="text-[15px] leading-6">
+          <b className="font-bold">Not limited to these stacks.</b>{" "}
+          <span className="text-paper/80">We also build in Python, Node.js, PHP, Java, .NET, React Native, Flutter and the major clouds.</span>
+        </p>
+        <Link href="/services#catalog-title" className="btn btn-primary self-start">
+          See everything we do <ArrowRight size={16} />
+        </Link>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
         <div className={duoCard}>
