@@ -6,7 +6,7 @@ import CtaBand from "@/components/organisms/CtaBand";
 export default function CaseStudiesTemplate() {
   return (
     <>
-      <section className="wrap pt-[clamp(56px,7vw,88px)]">
+      <section className="wrap pt-[clamp(24px,7vw,88px)]">
         <h1 className="text-display -ml-[0.04em]">Work that went live.</h1>
       </section>
       <CaseFeature

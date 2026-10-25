@@ -6,7 +6,7 @@ const direct = "flex items-center gap-2.5 text-ink";
 /** Left column of the contact page: headline, next steps and direct contact details. */
 export default function ContactInfo() {
   return (
-    <div className="flex flex-col gap-10 pt-[clamp(48px,7vw,88px)] px-(--edge) pb-14 lg:border-r-2 lg:border-divider">
+    <div className="flex flex-col gap-10 pt-[clamp(24px,7vw,88px)] px-(--edge) pb-14 lg:border-r-2 lg:border-divider">
       <div className="flex flex-col gap-5">
         <h1 className="text-[clamp(38px,5vw,64px)] leading-[1.02] tracking-[-0.03em] -ml-[0.04em]">Tell us what your ERP can’t do yet.</h1>
         <p className="text-lead max-w-[48ch] text-ink/80">Share a few details and we’ll come back with next steps and a rough estimate.</p>
