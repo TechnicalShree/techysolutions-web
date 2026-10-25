@@ -102,8 +102,8 @@ export default function HeroCanvas() {
         fill(bg);
         text(s, left + 12, cy + 0.5, `600 13px ${sans}`, fg);
       });
-    const headline = (s: string, a: number) =>
-      layer(a, () => text(s, 72, 86 + 14 * (1 - a), `800 44px ${sans}`, C.ink));
+    const headline = (s: string, a: number, center = false) =>
+      layer(a, () => text(s, center ? W / 2 : 72, 86 + 14 * (1 - a), `800 44px ${sans}`, C.ink, center ? "center" : "left"));
 
     // ---------- scene 1: three disconnected screens ----------
     const drawLaptop = () => {
@@ -328,7 +328,7 @@ export default function HeroCanvas() {
         bar(px + 10, PHONE.y + 189, (pw - 20) * 0.4, 7);
       });
 
-      headline(heroFlow.headlines[1], seg(t, 7.0, 7.8));
+      headline(heroFlow.headlines[1], seg(t, 7.0, 7.8), true);
     };
 
     const draw = (t: number) => {
