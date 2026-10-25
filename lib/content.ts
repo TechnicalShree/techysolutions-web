@@ -139,11 +139,18 @@ export const goLiveChecklist = [
 export const planWeeks = ["W1", "W2", "W3", "W4", "W5", "W6", "W7", "W8", "W9", "W10", "W11", "W12"];
 
 export const planPhases = [
-  { label: "Discover", start: 1, span: 2, note: "Workshops", tone: "ink" },
-  { label: "Configure", start: 3, span: 3, note: "Modules, roles, data", tone: "mid" },
-  { label: "Build", start: 5, span: 4, note: "Custom apps & integrations", tone: "mid" },
-  { label: "Go live", start: 9, span: 4, note: "Training & hypercare", tone: "accent" },
+  { label: "Discover", start: 1, span: 2, note: "Workshops", outcome: "Signed scope & price", tone: "a" },
+  { label: "Configure", start: 3, span: 3, note: "Modules, roles, data", outcome: "Working system to try", tone: "b" },
+  { label: "Build", start: 5, span: 4, note: "Custom apps & integrations", outcome: "Demo every week", tone: "c" },
+  { label: "Go live", start: 9, span: 4, note: "Training & hypercare", outcome: "Your team running on it", tone: "d" },
 ] as const;
+
+export const planPromises = [
+  "Written scope and fixed price before any code",
+  "A live demo every week — no black box",
+  "A go-live date we commit to in writing",
+  "Hands-on support after launch",
+];
 
 export const stack = ["Frappe", "ERPNext", "Python", "MariaDB", "Next.js", "React", "TypeScript", "Docker"];
 
