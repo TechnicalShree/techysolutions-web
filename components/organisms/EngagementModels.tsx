@@ -23,7 +23,7 @@ export default function EngagementModels() {
         <div className="max-w-[46ch]">
           <h3 className="text-[clamp(26px,3vw,36px)] leading-tight tracking-[-0.015em]">Don’t see your problem here?</h3>
           <p className="mt-2 text-[15px] leading-6 text-paper/80">
-            Tell us what’s slowing your team down. If it runs on Frappe, ERPNext or the web, we’ll scope a fix — free.
+            Tell us what’s slowing your team down. Whatever your tech stack, we’ll scope a fix — free.
           </p>
         </div>
         <Link href="/contact" className="btn btn-primary btn-lg">

@@ -15,10 +15,11 @@ export default function ServiceCatalog() {
       <div className="grid grid-cols-1 md:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] gap-[clamp(24px,4vw,56px)] items-start md:items-end">
         <div>
           <span className="kicker">Beyond the core three</span>
-          <h2 id="catalog-title" className="text-section mt-3">If it touches your ERP, we can build it.</h2>
+          <h2 id="catalog-title" className="text-section mt-3">Whatever you need, in whatever stack.</h2>
         </div>
         <p className="text-lead max-w-[48ch] text-ink/80">
-          Most clients start with one project and keep us for the rest. Here is what else we take on.
+          Frappe, ERPNext and Next.js are where we started — not where we stop. We also work in Python, Node.js,
+          PHP, Java, .NET, React Native, Flutter and the major clouds.
         </p>
       </div>
       <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
