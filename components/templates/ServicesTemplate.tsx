@@ -1,17 +1,19 @@
 import PageHead from "@/components/molecules/PageHead";
 import ServiceDetails from "@/components/organisms/ServiceDetails";
-import ServiceExtras from "@/components/organisms/ServiceExtras";
+import ServiceCatalog from "@/components/organisms/ServiceCatalog";
+import EngagementModels from "@/components/organisms/EngagementModels";
 
 export default function ServicesTemplate() {
   return (
     <>
       <PageHead title="One partner for your whole ERP stack.">
-        From the first process workshop to custom apps, customer portals and long-term support — on open-source
-        Frappe, ERPNext and Next.js.
+        From the first process workshop to custom apps, mobile apps, integrations and long-term support — on
+        open-source Frappe, ERPNext and Next.js.
       </PageHead>
       <div className="wrap">
         <ServiceDetails />
-        <ServiceExtras />
+        <ServiceCatalog />
+        <EngagementModels />
       </div>
     </>
   );

@@ -89,6 +89,28 @@ export const services: Service[] = [
   },
 ];
 
+// Everything beyond the three core services; `id` doubles as an anchor on /services.
+export const serviceCatalog = [
+  { id: "mobile", icon: "phone", title: "Mobile apps", copy: "React Native apps for field sales, delivery and warehouse teams — online or offline, synced with ERPNext." },
+  { id: "integrations", icon: "plug", title: "Integrations", copy: "Payment gateways, banks, WhatsApp, Shopify, marketplaces, GST e-invoicing and any REST API." },
+  { id: "reports", icon: "chart", title: "Reports & dashboards", copy: "Query reports, print formats and live dashboards your owners and finance team actually open." },
+  { id: "automation", icon: "zap", title: "Workflow automation", copy: "Approvals, alerts, scheduled jobs and auto-created documents that remove manual steps." },
+  { id: "migration", icon: "database", title: "Data migration", copy: "Move from Tally, spreadsheets or a legacy ERP with validated, reconciled opening balances." },
+  { id: "hr", icon: "users", title: "HR & payroll", copy: "Frappe HR set up for attendance, leave, payroll and appraisals — with your local rules." },
+  { id: "custom-apps", icon: "box", title: "Custom Frappe apps", copy: "Standalone business apps and SaaS products built on Frappe, from data model to user roles." },
+  { id: "ai", icon: "sparkles", title: "AI on your ERP data", copy: "Document extraction, smart search and assistants that read from ERPNext without leaking data." },
+  { id: "hosting", icon: "server", title: "Hosting & DevOps", copy: "Setup on Frappe Cloud, AWS or your own servers — with backups, monitoring and SSL handled." },
+  { id: "support", icon: "lifebuoy", title: "Support & upgrades", copy: "Version upgrades, fixes for slow or broken customisations and a monthly support retainer." },
+  { id: "audit", icon: "search", title: "ERP health check", copy: "A review of your existing setup: performance, security, data quality and a prioritised fix list." },
+  { id: "hire", icon: "code", title: "Dedicated developers", copy: "Frappe, ERPNext and Next.js engineers who join your team full-time or part-time." },
+] as const;
+
+export const engagementModels = [
+  { title: "Fixed-scope project", fit: "You know what you need", copy: "Agreed scope, price and go-live date. Best for implementations, portals and new apps." },
+  { title: "Monthly retainer", fit: "You're already live", copy: "A block of hours each month for support, small changes and upgrades — no tickets lost." },
+  { title: "Dedicated team", fit: "You have a long roadmap", copy: "One or more developers working only on your product, managed by you or by us." },
+];
+
 export const goLiveChecklist = [
   { label: "Chart of accounts mapped", done: true },
   { label: "Opening stock migrated", done: true },
@@ -167,6 +189,6 @@ export const contactNextSteps = [
   { num: "03", title: "A written proposal", copy: "Scope, approach and an estimate you can share internally." },
 ];
 
-export const enquiryNeeds = ["ERP customisation", "ERPNext implementation", "Support & upgrades", "Next.js web app", "Hire developers"];
+export const enquiryNeeds = ["ERP customisation", "ERPNext implementation", "Support & upgrades", "Next.js web app", "Mobile app", "Integrations", "Hire developers", "Something else"];
 export const erpOptions = ["Yes", "No", "Not sure"];
 export const timelineOptions = ["ASAP", "1–3 months", "Exploring"];
