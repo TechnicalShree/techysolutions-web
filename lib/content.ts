@@ -26,23 +26,14 @@ export const heroStats = [
   { num: "100%", label: "Open-source stack" },
 ];
 
-export const heroDashboard = {
-  kpis: [
-    { label: "Sales orders", value: "1,284", delta: "+12% vs last month" },
-    { label: "To deliver", value: "86", delta: "14 due today" },
-    { label: "Overdue", value: "12", delta: "−5 this week" },
-  ],
-  bars: [38, 52, 45, 61, 58, 70, 64, 79, 72, 85, 80, 94],
-  orders: [
-    { id: "SO-0912", who: "Northwind Traders", status: "To deliver", tag: "tag tag-outline" },
-    { id: "SO-0911", who: "Acme Wholesale", status: "Overdue", tag: "tag tag-accent" },
-    { id: "SO-0910", who: "Globex Retail", status: "Paid", tag: "tag tag-neutral" },
-  ],
-  portal: [
-    { item: "SO-0912 · 40 units", state: "Shipped" },
-    { item: "SO-0887 · 12 units", state: "Delivered" },
-    { item: "QTN-221", state: "Awaiting you" },
-  ],
+export const heroFlow = {
+  order: { label: "Sales order", id: "SAL-ORD-2026-00118", customer: "Sahyadri Agro Supplies", amount: "₹4,86,200" },
+  button: "Approve order",
+  pending: "Pending approval",
+  portal: { title: "Portal" },
+  phone: { title: "Today's loads" },
+  problem: { office: "Pending", portal: "Awaiting update", field: "On hold" },
+  headlines: ["Three teams. Three versions of the same order.", "ERPNext at the center."],
 };
 
 export const clientLogos = ["[Client]", "[Client]", "[Client]", "[Client]", "[Client]", "[Client]"];

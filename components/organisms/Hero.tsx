@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import Tag from "@/components/atoms/Tag";
-import HeroVisual from "@/components/organisms/HeroVisual";
+import HeroCanvas from "@/components/organisms/HeroCanvas";
 import { heroStats } from "@/lib/content";
 
 export default function Hero() {
@@ -36,7 +36,7 @@ export default function Hero() {
             ))}
           </div>
         </div>
-        <HeroVisual />
+        <HeroCanvas />
       </div>
     </section>
   );
