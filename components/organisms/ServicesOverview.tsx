@@ -43,9 +43,9 @@ export default function ServicesOverview() {
             <p className="text-sm leading-5.5 text-ink/78">Slow pages, broken customisations or stuck on an old version — we take it over.</p>
           </div>
           <div className="flex items-center gap-2 font-extrabold text-xl" aria-hidden="true">
-            <span className="py-2 px-2.5 rounded-lg bg-surface">v13</span>
+            <span className="py-2 px-2.5 rounded-lg bg-surface">v14</span>
             <ArrowRight size={18} strokeWidth={2.5} />
-            <span className="py-2 px-2.5 rounded-lg bg-accent text-paper">v15</span>
+            <span className="py-2 px-2.5 rounded-lg bg-accent text-paper">v16</span>
           </div>
         </div>
         <div className={duoCard}>
