@@ -17,7 +17,7 @@ export default function SiteNav() {
 
   return (
     <header className="sticky top-0 z-50 bg-paper border-b-2 border-divider">
-      <nav className="max-w-[1280px] mx-auto py-3 px-(--edge) flex items-center gap-7" aria-label="Main">
+      <nav className="max-w-[1280px] mx-auto py-2 md:py-3 px-(--edge) flex items-center gap-7" aria-label="Main">
         <Link href="/" className="flex items-center gap-2.5 mr-auto text-ink" aria-label={site.name + " home"}>
           <Image src="/logo-mark.png" alt="" width={35} height={32} priority />
           <span className="font-extrabold text-[19px] tracking-[-0.01em]">{site.name}</span>

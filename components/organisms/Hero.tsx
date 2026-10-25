@@ -7,8 +7,8 @@ import { heroStats } from "@/lib/content";
 export default function Hero() {
   return (
     <section className="bg-[linear-gradient(to_right,color-mix(in_srgb,var(--color-ink)_6%,transparent)_1px,transparent_1px)] bg-size-[calc(100%/12)_100%]">
-      <div className="wrap grid grid-cols-1 xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 items-center pt-[clamp(48px,6vw,80px)] pb-[clamp(56px,7vw,88px)]">
-        <div className="flex flex-col gap-7">
+      <div className="wrap grid grid-cols-1 xl:grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-12 items-center pt-[clamp(24px,6vw,80px)] pb-[clamp(56px,7vw,88px)]">
+        <div className="flex flex-col gap-4 sm:gap-7">
           <div className="flex flex-wrap gap-1.5">
             <Tag>ERPNext</Tag>
             <Tag>Frappe</Tag>
