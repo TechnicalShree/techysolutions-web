@@ -4,7 +4,7 @@ import { Archivo } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/organisms/SiteNav";
 import SiteFooter from "@/components/organisms/SiteFooter";
-import { site } from "@/lib/content";
+import { site, socialBanner } from "@/lib/content";
 
 const archivo = Archivo({
   subsets: ["latin"],
@@ -16,14 +16,14 @@ const archivo = Archivo({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: site.name + " — ERPNext, Frappe & Next.js",
+    default: `${site.name} — ${socialBanner.title} & ${socialBanner.accent} ${socialBanner.extra}`,
     template: "%s · " + site.name,
   },
   description: site.description,
   openGraph: {
     type: "website",
     siteName: site.name,
-    title: site.name + " — ERPNext, Frappe & Next.js",
+    title: `${site.name} — ${socialBanner.title} & ${socialBanner.accent} ${socialBanner.extra}`,
     description: site.description,
   },
   twitter: {

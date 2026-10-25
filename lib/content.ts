@@ -7,7 +7,7 @@ export const site = {
     (process.env.VERCEL_PROJECT_PRODUCTION_URL && `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`) ||
     "https://techysolutions.com",
   description:
-    "ERPNext implementation, Frappe customisation, Next.js web apps and dedicated developers for growing businesses.",
+    "ERPNext implementation and customisation, web and mobile apps, integrations and dedicated developers — in any tech stack.",
   email: "hello@techysolutions.com",
   phone: "+00 000 000 0000",
   address: "[Office address, City, Country]",
@@ -27,6 +27,14 @@ export function yearsOfExperience(now = new Date()) {
   if (part >= 0.4) return `${whole}½`;
   return `${whole}+`;
 }
+
+// Text on the link-preview banner (app/opengraph-image.tsx) and the default page title.
+export const socialBanner = {
+  title: "ERPNext, Frappe",
+  accent: "Next.js",
+  extra: "+ every other tech stack",
+  tagline: "Digital systems for growing businesses",
+};
 
 export const navLinks = [
   { href: "/services", label: "Services" },
