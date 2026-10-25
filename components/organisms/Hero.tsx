@@ -14,7 +14,7 @@ export default function Hero() {
             <Tag>Frappe</Tag>
             <Tag>Next.js</Tag>
           </div>
-          <h1 className="text-display -ml-[0.04em]">
+          <h1 className="text-[clamp(40px,4.6vw,60px)] leading-[1.02] tracking-[-0.03em] -ml-[0.04em]">
             Run your whole business on one system <span className="text-accent">that fits.</span>
           </h1>
           <p className="text-lead max-w-[48ch] text-ink/80">
