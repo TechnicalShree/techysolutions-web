@@ -36,7 +36,10 @@ export const heroFlow = {
   headlines: ["Three teams. Three versions of the same order.", "ERPNext at the center."],
 };
 
-export const clientLogos = ["[Client]", "[Client]", "[Client]", "[Client]", "[Client]", "[Client]"];
+export const clientLogos = [
+  { name: "ICFC", url: "https://icfc.com.sg", logo: "/clients/icfc.webp", width: 450, height: 318 },
+  { name: "Dieture", url: "https://www.dieture.com", logo: "/clients/dieture.svg", width: 107, height: 40 },
+];
 
 export const outcomes = [
   { icon: "database", title: "One source of truth", copy: "Sales, stock, purchasing, accounts and HR in one database." },
