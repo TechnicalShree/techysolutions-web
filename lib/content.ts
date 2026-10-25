@@ -11,7 +11,22 @@ export const site = {
   email: "hello@techysolutions.com",
   phone: "+00 000 000 0000",
   address: "[Office address, City, Country]",
+  // Date we started delivering projects; drives the "years of experience" stats.
+  startedOn: "2024-10-01",
 };
+
+/**
+ * Years since site.startedOn, rounded down to a friendly label:
+ * just past a year → "2+", around the middle → "2½", close to the next → "~3".
+ */
+export function yearsOfExperience(now = new Date()) {
+  const years = (now.getTime() - new Date(site.startedOn).getTime()) / (365.25 * 24 * 3600 * 1000);
+  const whole = Math.floor(years), part = years - whole;
+  if (whole < 1) return "<1";
+  if (part >= 0.75) return `~${whole + 1}`;
+  if (part >= 0.4) return `${whole}½`;
+  return `${whole}+`;
+}
 
 export const navLinks = [
   { href: "/services", label: "Services" },
@@ -21,8 +36,8 @@ export const navLinks = [
 ];
 
 export const heroStats = [
-  { num: "[00]+", label: "ERPNext go-lives" },
-  { num: "[00] yrs", label: "In business" },
+  { num: "3+", label: "ERPs live" },
+  { num: `${yearsOfExperience()} yrs`, label: "Of experience" },
   { num: "100%", label: "Open-source stack" },
 ];
 
@@ -164,8 +179,8 @@ export const featuredCase = {
 };
 
 export const aboutStats = [
-  { num: "[00]+", label: "Implementations" },
-  { num: "[00]", label: "Years in business" },
+  { num: "3+", label: "ERPs live" },
+  { num: yearsOfExperience(), label: "Years of experience" },
   { num: "[00]", label: "People on the team" },
 ];
 
