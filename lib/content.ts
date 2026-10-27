@@ -8,7 +8,7 @@ export const site = {
     "https://techysolutions.com",
   description:
     "ERPNext implementation and customisation, web and mobile apps, integrations and dedicated developers — in any tech stack.",
-  email: "hello@techysolutions.com",
+  email: "techysolution.ts@gmail.com",
   phone: "+00 000 000 0000",
   address: "[Office address, City, Country]",
   // Date we started delivering projects; drives the "years of experience" stats.
