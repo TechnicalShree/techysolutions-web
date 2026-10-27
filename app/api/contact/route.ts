@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { saveEnquiry } from "@/lib/db";
 
 type Payload = {
   name?: string;
@@ -40,10 +41,31 @@ export async function POST(req: Request) {
     .filter(Boolean)
     .join("\n");
 
+  let saved = false;
+  let dbFailed = false;
+  try {
+    saved = await saveEnquiry({
+      name,
+      email,
+      company: body.company?.trim().slice(0, 200) || undefined,
+      phone: body.phone?.trim().slice(0, 50) || undefined,
+      needs: body.needs?.slice(0, 20).map((n) => String(n).slice(0, 100)),
+      onErpnext: body.onErpnext?.slice(0, 50),
+      timeline: body.timeline?.slice(0, 50),
+      message: body.message?.slice(0, 5000),
+    });
+  } catch (e) {
+    dbFailed = true;
+    console.error("[contact] DB insert failed", e);
+  }
+
   const { FRAPPE_URL, FRAPPE_API_KEY, FRAPPE_API_SECRET } = process.env;
 
   if (!FRAPPE_URL || !FRAPPE_API_KEY || !FRAPPE_API_SECRET) {
-    console.info("[contact] FRAPPE_* env not set — enquiry logged only", { name, email, company: body.company, summary });
+    if (dbFailed) {
+      return NextResponse.json({ ok: false, error: "We couldn’t send that just now. Please email us instead." }, { status: 502 });
+    }
+    if (!saved) console.info("[contact] TURSO_*/FRAPPE_* env not set — enquiry logged only", { name, email, company: body.company, summary });
     return NextResponse.json({ ok: true });
   }
 
